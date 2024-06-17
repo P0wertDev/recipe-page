@@ -1,0 +1,206 @@
+:root {
+    --nutmeg: rgb(133, 70, 50);
+    --dark-raspberry: rgb(123, 40, 79);
+    --rose-white: rgb(255, 245, 250);
+    --eggshell: rgb(243, 230, 216);
+    --light-grey: rgb(228, 222, 216);
+    --wenge-brown: rgb(95, 87, 78);
+    --dark-charcoal: rgb(48, 45, 44);
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'young';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight:lighter;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--eggshell);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5%
+}
+
+.global-card {
+    background-color: white;
+    width: 45rem;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    gap: 1.5em;
+}
+
+.line {
+    width: 100%;
+    height: .2px;
+    background-color: var(--light-grey);
+}
+
+h1, h2 {
+    font-family: 'young';
+}
+
+h1 {
+    padding-bottom: .4em;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+h2 {
+    color: var(--nutmeg);
+    padding-bottom: .5em;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+
+p, li {
+    text-wrap: pretty;
+    color: var(--dark-charcoal);
+    font-family: 'outfit';
+    line-height: 1.8rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+li {
+    padding-left: 1em;
+}
+
+.card {
+    width: 100%;
+}
+
+.list {
+    padding-left: 1.5em;
+    li::marker{
+        color:rgb(133, 70, 50) ;
+    }
+}
+
+ul li::marker{
+    font-size: smaller;
+}
+
+.omelette-img {
+    width: 40em;
+    height: 20em;
+    border-radius: 10px;
+}
+
+.preparation {
+    background-color: var(--rose-white);
+    width: 100%;
+    padding: 2.5em;
+    padding-bottom: 1.5em;
+    border-radius: 10px;
+    position: relative;
+}
+
+.preparation-title {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    font-size: 1.2em;
+    font-family: 'outfit';
+    color: var(--dark-raspberry);
+    font-weight: 700;
+}
+
+.preparation-list {
+    margin-top: 1.5em;
+    line-height: 2.2em;
+    padding-left: .8em;
+    li::marker{
+        color: rgb(123, 40, 79);
+    }
+}
+
+.t-info {
+    margin: .8em;
+    font-family: 'outfit';
+    display: flex;
+    justify-content: space-between;
+}
+
+.t-rght {
+    margin-left: 1em;
+}
+
+.t-lft {
+    color: var(--nutmeg);
+    font-weight: bold;
+    flex-basis: 50%;
+}
+
+.attribution {
+    text-align: center;
+    color: var(--dark-charcoal);
+    font-weight: 400;
+    font-family: 'outfit';
+    font-size: 13px;
+    a {
+        font-weight: 500;
+        text-decoration:none;
+        transition: all .5s ease;
+        color: var(--dark-charcoal);
+    }
+    a:hover {
+        color: var(--dark-raspberry);
+        font-weight: 600;
+        text-shadow: 0 0 2px rgba(228, 138, 180, 0.6);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (width <= 950px) {
+    
+    .global-card {
+        width: 100dvw;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    
+    .omelette-img {
+        width: 100dvw;
+        height: 45dvw;
+        border-radius: 0;
+
+    }
+    
+    .principal-title{
+        width: 90dvw;
+    }
+    
+    .line {
+        width: 90dvw;
+    }
+
+    .preparation {
+        width: 90dvw;
+    }
+    
+    .card {
+        width: 90dvw;
+    }
+}
